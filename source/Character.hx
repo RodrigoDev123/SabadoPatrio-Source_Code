@@ -89,7 +89,8 @@ class Character extends FlxSprite
 		"mom"=>0xFFD8558E,
 		"parents-christmas"=>0xFFC45EAE,
 		"senpai"=>0xFFFFAA6F,
-		"spirit"=>0xFFFF3C6E
+		"spirit"=>0xFFFF3C6E,
+		"negas"=>0xFF455349
 	];
 
 	override public function destroy(){

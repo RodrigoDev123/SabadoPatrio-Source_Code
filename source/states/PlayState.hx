@@ -1976,7 +1976,7 @@ class PlayState extends MusicBeatState
 			{
 				babyArrow.yOffset -= 10;
 				babyArrow.alpha = 0;
-				FlxTween.tween(babyArrow,{yOffset: babyArrow.yOffset + 10, alpha:1}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
+				FlxTween.tween(babyArrow,{yOffset: babyArrow.yOffset + 10, alpha:0.8}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
 			}
 
 			strumLineNotes.add(babyArrow);

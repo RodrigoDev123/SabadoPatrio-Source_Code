@@ -134,6 +134,11 @@ class Receptor extends FNFSprite {
   }
 
   override function update(elapsed:Float){
+    if (animation.curAnim.name == "confirm"){
+        alpha = 1;
+    }else{
+        alpha = 0.8;
+    }
     angle = baseAngle+desiredAngle;
 
 

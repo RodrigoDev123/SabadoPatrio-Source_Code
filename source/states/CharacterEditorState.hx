@@ -272,7 +272,7 @@ class CharacterEditorState extends MusicBeatState {
 		healthBar.scrollFactor.set();
 		healthBar.screenCenter(X);
 
-    camGame.zoom = stage.defaultCamZoom;
+    camGame.zoom = stage.defaultCamZoom+0.1;
     zoom=camGame.zoom;
     camFollow = new FlxObject(stage.centerX,stage.centerY);
     camOffset = new FlxObject(0,0);
@@ -337,6 +337,8 @@ class CharacterEditorState extends MusicBeatState {
         Conductor.changeBPM(0);
         FlxG.switchState(previousState);
       }
+     
+
       if (FlxG.keys.pressed.I || FlxG.keys.pressed.J || FlxG.keys.pressed.K || FlxG.keys.pressed.L)
   		{
   			if (FlxG.keys.pressed.I)
@@ -387,7 +389,18 @@ class CharacterEditorState extends MusicBeatState {
         FlxG.keys.pressed.UP,
         FlxG.keys.pressed.RIGHT,
       ];
+      if (FlxG.keys.justPressed.R) {
+				FlxG.camera.zoom = 1;
+			}
 
+			if (FlxG.keys.pressed.E && FlxG.camera.zoom < 3) {
+				FlxG.camera.zoom += elapsed * FlxG.camera.zoom;
+				if(FlxG.camera.zoom > 3) FlxG.camera.zoom = 3;
+			}
+			if (FlxG.keys.pressed.Q && FlxG.camera.zoom > 0.1) {
+				FlxG.camera.zoom -= elapsed * FlxG.camera.zoom;
+				if(FlxG.camera.zoom < 0.1) FlxG.camera.zoom = 0.1;
+			}
       var offsets = [
         [1,0],
         [0,-1],
@@ -424,7 +437,7 @@ class CharacterEditorState extends MusicBeatState {
 
     ghost.flipX = curCharacter.flipX;
 
-    zoom = FlxMath.lerp(zoom, stage.defaultCamZoom, Main.adjustFPS(0.1));
+    zoom = FlxMath.lerp(zoom, stage.defaultCamZoom+0.1, Main.adjustFPS(0.1));
     camGame.zoom=zoom;
     var mid =curCharacter.getMidpoint();
     if((curCharacter is Boyfriend)){

@@ -27,7 +27,6 @@ typedef SkinManifest = {
 	var author:String;
 	var format:String;
 }
-
 typedef NoteBehaviour = {
 	var actsLike:String;
 	var antialiasing:Bool;

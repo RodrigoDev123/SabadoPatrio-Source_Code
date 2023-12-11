@@ -1,0 +1,120 @@
+{
+	"charOffset": [
+		0,
+		-70
+	],
+	"spritesheet": "MEX_BOYFRIEND",
+	"singDur": 4,
+	"camOffset": [
+		-55,
+		-45
+	],
+	"anims": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"fps": 24,
+			"prefix": "BF idle",
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				-16,
+				73
+			],
+			"fps": 24,
+			"prefix": "Bf up",
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"offsets": [
+				53,
+				0
+			],
+			"fps": 24,
+			"prefix": "Bf left",
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"offsets": [
+				-46,
+				5
+			],
+			"fps": 24,
+			"prefix": "Bf right",
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"offsets": [
+				17,
+				-75
+			],
+			"fps": 24,
+			"prefix": "Bf down",
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"offsets": [
+				-4,
+				74
+			],
+			"fps": 24,
+			"prefix": "Bf miss up",
+			"looped": false,
+			"name": "singUPmiss"
+		},
+		{
+			"offsets": [
+				129,
+				5
+			],
+			"fps": 24,
+			"prefix": "Bf miss right",
+			"looped": false,
+			"name": "singRIGHTmiss"
+		},
+		{
+			"offsets": [
+				150,
+				0
+			],
+			"fps": 24,
+			"prefix": "Bf miss left",
+			"looped": false,
+			"name": "singLEFTmiss"
+		},
+		{
+			"offsets": [
+				19,
+				-24
+			],
+			"fps": 24,
+			"prefix": "Bf miss down",
+			"looped": false,
+			"name": "singDOWNmiss"
+		},
+		{
+			"offsets": [
+				-31,
+				8
+			],
+			"fps": 24,
+			"prefix": "Bf hey",
+			"looped": false,
+			"name": "hey"
+		}
+	],
+	"flipX": false,
+	"antialiasing": true,
+	"iconName": "bf-mex",
+	"beatDancer": false,
+	"healthColor": "0xFFFF03FF",
+	"format": "andromeda"
+}

@@ -7,31 +7,31 @@
   "arguments": {
       "splashes":{
         "alpha": 1,
-        "sheet": "AndroSplash",
+        "sheet": "NOTE_Splashes",
         "scale":1,
         "left":{
           "framerate": 30,
           "offsetX": -35,
           "offsetY": 0,
-          "prefix": "splash left0"
+          "prefix": "note splash 1 purple"
         },
         "up":{
           "framerate": 30,
           "offsetX": -5,
           "offsetY": 0,
-          "prefix": "splash up0"
+          "prefix": "note splash 1 green"
         },
         "down":{
           "framerate": 30,
           "offsetX": -5,
           "offsetY": -2,
-          "prefix": "splash down0"
+          "prefix": "note splash 1 blue"
         },
         "right":{
           "framerate": 30,
           "offsetX": -3,
           "offsetY": 2,
-          "prefix": "splash right0"
+          "prefix": "note splash 1 red"
         }
       },
       "notes":{
