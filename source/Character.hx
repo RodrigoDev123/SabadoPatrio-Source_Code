@@ -75,7 +75,8 @@ class Character extends FlxSprite
 		"gf-car"=>"gf",
 		"gf-christmas"=>"gf",
 		"monster-christmas"=>"monster",
-		"senpai-angry"=>"senpai"
+		"senpai-angry"=>"senpai",
+		"negas"=>"negas"
 	];
 
 	public var iconColors:Map<String,FlxColor> = [ // uses icon names

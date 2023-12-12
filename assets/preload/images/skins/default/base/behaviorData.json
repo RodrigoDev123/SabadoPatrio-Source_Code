@@ -10,28 +10,28 @@
         "sheet": "NOTE_Splashes",
         "scale":1,
         "left":{
-          "framerate": 30,
-          "offsetX": -35,
-          "offsetY": 0,
-          "prefix": "note splash 1 purple"
+          "framerate": 22,
+          "offsetX": -12,
+          "offsetY": -37,
+          "prefix": "note splash 1 red"
         },
         "up":{
-          "framerate": 30,
-          "offsetX": -5,
-          "offsetY": 0,
-          "prefix": "note splash 1 green"
+          "framerate": 22,
+          "offsetX": 23,
+          "offsetY": -37,
+          "prefix": "note splash 1 white"
         },
         "down":{
-          "framerate": 30,
-          "offsetX": -5,
-          "offsetY": -2,
-          "prefix": "note splash 1 blue"
+          "framerate": 22,
+          "offsetX": 23,
+          "offsetY": -37,
+          "prefix": "note splash 1 white"
         },
         "right":{
-          "framerate": 30,
-          "offsetX": -3,
-          "offsetY": 2,
-          "prefix": "note splash 1 red"
+          "framerate": 22,
+          "offsetX": 25,
+          "offsetY": -37,
+          "prefix": "note splash 1 green"
         }
       },
       "notes":{

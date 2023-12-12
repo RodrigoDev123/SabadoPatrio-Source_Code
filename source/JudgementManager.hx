@@ -62,11 +62,11 @@ class JudgementManager
 {
 	public static var judgementDisplayNames:Map<String,String> = [
 		"epic"=>"Epic",
-		"sick"=>"Sick",
-		"good"=>"Good",
-		"bad"=>"Bad",
-		"shit"=>"Shit",
-		"miss"=>"Miss"
+		"sick"=>"Awebos",
+		"good"=>"Chido",
+		"bad"=>"Vergas",
+		"shit"=>"Putos",
+		"miss"=>"Cagadas"
 	];
   var judgeData:JudgementData;
 	var highestAcc:Float = 0;

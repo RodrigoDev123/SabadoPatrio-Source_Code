@@ -11,6 +11,7 @@ import openfl.utils.AssetType;
 import states.*;
 import ui.*;
 import flixel.math.FlxPoint;
+import lime.app.Application;
 import math.Vector3;
 using StringTools;
 
@@ -18,6 +19,18 @@ using StringTools;
 class CoolUtil
 {
 	public static var difficultyArray:Array<String> = ['EASY', "NORMAL", "HARD"];
+
+	/**
+		* i made this var why i'm lazy to write and rewrite 100 times
+	**/
+	public static var titleTemplate:String = "FNF: Sabado Patrio - [DEMO]";
+	/**
+		* set the title of the window app
+	**/
+	public static function setWindowTitle(newTitle:String = "s"){
+		Application.current.window.title = newTitle;
+	}
+	
 	public static function square(angle:Float){
 		var fAngle = angle % (Math.PI * 2);
 

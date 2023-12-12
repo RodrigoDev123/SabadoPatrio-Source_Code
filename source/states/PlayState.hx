@@ -211,7 +211,7 @@ class PlayState extends MusicBeatState
 
 	var judgeBin:FlxTypedGroup<JudgeSprite>;
 	var comboBin:FlxTypedGroup<ComboSprite>;
-	var accuracyName:String = 'Accuracy';
+	var accuracyName:String = 'Como vas';
 
 	var bindData:Array<FlxKey>;
 	var lua:LuaVM;
@@ -2234,20 +2234,20 @@ class PlayState extends MusicBeatState
 		if(currentOptions.onlyScore){
 			if(botplayScore!=0){
 				if(songScore==0)
-					scoreTxt.text = 'Bot Score: ${botplayScore}';
+					scoreTxt.text = 'Bot Tacos: ${botplayScore}';
 				else
-					scoreTxt.text = 'Score: ${songScore} | Bot Score: ${botplayScore}';
+					scoreTxt.text = 'Tacos: ${songScore} | Bot Tacos: ${botplayScore}';
 			}else{
-				scoreTxt.text = 'Score: ${songScore}';
+				scoreTxt.text = 'Tacos: ${songScore}';
 			}
 		}else{
 			if(botplayScore!=0){
 				if(songScore==0)
-					scoreTxt.text = 'Bot Score: ${botplayScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
+					scoreTxt.text = 'Bot Tacos: ${botplayScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
 				else
-					scoreTxt.text = 'Score: ${songScore} | Bot Score: ${botplayScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
+					scoreTxt.text = 'Tacos: ${songScore} | Bot Tacos: ${botplayScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
 			}else{
-				scoreTxt.text = 'Score: ${songScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
+				scoreTxt.text = 'Tacos: ${songScore} | ${accuracyName}: ${shownAccuracy}% | ${grade}';
 			}
 		}
 	}
@@ -2978,6 +2978,31 @@ class PlayState extends MusicBeatState
 		camRating.followLerp = Main.adjustFPS(.02);
 
 		super.update(elapsed);
+
+		// WINDOW'S TITLE BULLSHIT
+		if(currentOptions.onlyScore){
+			if(botplayScore!=0){
+				if(songScore==0)
+					CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [BOT TACOS: ${botplayScore}]');
+
+				else
+					CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [TACOS: ${songScore} | BOT TACOS: ${botplayScore}]');
+
+			}else{
+				CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [TACOS: ${songScore}]');
+
+			}
+		}else{
+			if(botplayScore!=0){
+				if(songScore==0)
+					CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [BOT TACOS: ${botplayScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}% ');
+				else
+					CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [TACOS: ${songScore} | BOT TACOS: ${botplayScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}%]');
+			}else{
+				CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [TACOS: ${songScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}%');
+			}
+		}
+        // END :D
 		for(i in 0...justPressedKeys.length)justPressedKeys[i]=false;
 
 		while(eventSchedule[0]!=null){
@@ -3655,7 +3680,7 @@ class PlayState extends MusicBeatState
 
 	function doMiss(direction:Int = 1):Void
 	{
-		health += judgeMan.getJudgementHealth('miss');
+		health += 0.05;
 		judgeMan.judgementCounter.set("miss",judgeMan.judgementCounter.get("miss")+1);
 		updateJudgementCounters();
 		previousHealth=health;
