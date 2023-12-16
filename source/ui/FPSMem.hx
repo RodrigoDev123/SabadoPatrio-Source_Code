@@ -49,11 +49,12 @@ class FPSMem extends TextField
 		currentFPS = 0;
 		selectable = false;
 		mouseEnabled = false;
-		defaultTextFormat = new TextFormat(Paths.font("vcr.ttf"), 12, color);
+		defaultTextFormat = new TextFormat(Paths.font("vcr.ttf"), 14, color);
 		width = 1280;
 		height = 720;
 
 		text = "FPS: ";
+		
 
 		cacheCount = 0;
 		currentTime = 0;
@@ -98,7 +99,7 @@ class FPSMem extends TextField
 				}
 			}
 			if(showMemPeak)
-				text += "Mem Peak: " + highestMem + " MB\n";
+				text += "Mem Peak: " + highestMem + " MB\nDev Build";
 
 		}
 

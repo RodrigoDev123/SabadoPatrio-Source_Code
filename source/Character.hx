@@ -243,7 +243,7 @@ class Character extends FlxSprite
 			}
 			dadVar = charData.singDur;
 			flipX = charData.flipX;
-			var clr:Null<FlxColor> = FlxColor.fromString(charData.healthColor);
+			var clr = FlxColor.fromString(charData.healthColor);
 			if(clr==null){
 				clr=0xFF66FF33;
 			}

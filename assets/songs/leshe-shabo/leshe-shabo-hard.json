@@ -45,48 +45,39 @@
 				],
 				"events": [
 					{
+						"time": 0,
 						"events": [
 							{
+								"name": "Appear PixxiMono",
 								"args": [
-									0.04,
-									0.02
-								],
-								"name": "Camera Zoom Bump"
-							},
-							{
-								"name": "Camera Zoom",
-								"args": [
-									1.28
+									"true"
 								]
 							}
-						],
-						"time": 631.578947368421
+						]
 					},
 					{
+						"time": 631.578947368421,
 						"events": [
 							{
+								"name": "Camera Zoom Bump",
 								"args": [
 									0.06,
-									0.02
-								],
-								"name": "Camera Zoom Bump"
-							},
-							{
-								"name": "Screen Shake",
-								"args": [
-									-0.05,
-									0.13,
-									"X"
-								]
-							},
-							{
-								"name": "Camera Zoom",
-								"args": [
-									1.38
+									0.04
 								]
 							}
-						],
-						"time": 868.421052631579
+						]
+					},
+					{
+						"time": 868.421052631579,
+						"events": [
+							{
+								"name": "Camera Zoom Bump",
+								"args": [
+									0.06,
+									0.04
+								]
+							}
+						]
 					}
 				],
 				"mustHitSection": true
@@ -122,19 +113,26 @@
 				],
 				"events": [
 					{
+						"time": 1342.10526315789,
+						"events": [
+							{
+								"name": "Screen Shake",
+								"args": [
+									0.01,
+									0.43,
+									"XY"
+								]
+							}
+						]
+					},
+					{
 						"time": 1894.73684210526,
 						"events": [
 							{
 								"name": "Camera Zoom Bump",
 								"args": [
-									0.04,
-									0.02
-								]
-							},
-							{
-								"name": "Camera Zoom",
-								"args": [
-									1.38
+									0.06,
+									0.04
 								]
 							}
 						]
@@ -143,24 +141,10 @@
 						"time": 2210.52631578947,
 						"events": [
 							{
-								"name": "Screen Shake",
-								"args": [
-									-0.04,
-									0.11,
-									"X"
-								]
-							},
-							{
-								"name": "Camera Zoom",
-								"args": [
-									1.38
-								]
-							},
-							{
 								"name": "Camera Zoom Bump",
 								"args": [
-									0.04,
-									0.02
+									0.06,
+									0.04
 								]
 							}
 						]
@@ -305,7 +289,7 @@
 								"name": "Screen Shake",
 								"args": [
 									0.02,
-									0.23,
+									0.8,
 									"XY"
 								]
 							}
@@ -363,7 +347,32 @@
 						78.9473684210526
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"time": 4421.05263157895,
+						"events": [
+							{
+								"name": "Camera Zoom Bump",
+								"args": [
+									0.07,
+									0.02
+								]
+							}
+						]
+					},
+					{
+						"time": 4894.73684210526,
+						"events": [
+							{
+								"name": "Camera Zoom Bump",
+								"args": [
+									0.07,
+									0.02
+								]
+							}
+						]
+					}
+				],
 				"mustHitSection": true
 			},
 			{
@@ -508,27 +517,18 @@
 					],
 					[
 						7421.05263157895,
-						3,
+						0,
+						2.27373675443232e-13,
 						0
 					],
 					[
 						7500,
-						1,
+						3,
+						0,
 						0
 					]
 				],
 				"events": [
-					{
-						"time": 6947.36842105263,
-						"events": [
-							{
-								"name": "Camera Zoom",
-								"args": [
-									1.1
-								]
-							}
-						]
-					},
 					{
 						"time": 7184.21052631579,
 						"events": [
@@ -536,7 +536,7 @@
 								"name": "Scroll Velocity",
 								"args": [
 									"mult",
-									0.65
+									0.4
 								]
 							}
 						]
@@ -549,7 +549,8 @@
 				"sectionNotes": [
 					[
 						7578.94736842105,
-						3,
+						0,
+						0,
 						0
 					],
 					[
@@ -559,6 +560,7 @@
 					],
 					[
 						7736.84210526316,
+						2,
 						0,
 						0
 					],
@@ -600,22 +602,16 @@
 				],
 				"events": [
 					{
+						"time": 8289.47368421053,
 						"events": [
 							{
-								"args": [
-									1
-								],
-								"name": "Camera Zoom"
-							},
-							{
+								"name": "Scroll Velocity",
 								"args": [
 									"mult",
-									1.2
-								],
-								"name": "Scroll Velocity"
+									1.05
+								]
 							}
-						],
-						"time": 8289.47368421053
+						]
 					}
 				],
 				"mustHitSection": true
@@ -659,27 +655,56 @@
 						0
 					],
 					[
-						9710.52631578947,
-						3,
+						9631.57894736842,
+						1,
+						0,
 						0
 					],
 					[
-						9789.47368421052,
-						3,
+						9710.52631578948,
+						0,
+						0,
+						0
+					],
+					[
+						9789.47368421053,
+						1,
+						1.13686837721616e-13,
 						0
 					],
 					[
 						9868.42105263158,
-						3,
+						2,
+						0,
 						0
 					],
 					[
 						9947.36842105263,
 						3,
 						0
+					],
+					[
+						9947.36842105263,
+						0,
+						2.27373675443232e-13,
+						0
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"time": 9631.57894736842,
+						"events": [
+							{
+								"name": "Screen Shake",
+								"args": [
+									0.01,
+									0.43,
+									"XY"
+								]
+							}
+						]
+					}
+				],
 				"mustHitSection": false
 			},
 			{
@@ -731,7 +756,20 @@
 						0
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"time": 10105.2631578947,
+						"events": [
+							{
+								"name": "Camera Zoom Interval",
+								"args": [
+									2,
+									0.02
+								]
+							}
+						]
+					}
+				],
 				"mustHitSection": false
 			},
 			{
@@ -1002,7 +1040,21 @@
 						0
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.01,
+									0.32,
+									"XY"
+								],
+								"name": "Screen Shake"
+							}
+						],
+						"time": 13894.7368421053
+					}
+				],
 				"mustHitSection": false
 			},
 			{
@@ -1305,7 +1357,21 @@
 						78.9473684210526
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.01,
+									0.32,
+									"XY"
+								],
+								"name": "Screen Shake"
+							}
+						],
+						"time": 18947.3684210526
+					}
+				],
 				"mustHitSection": true
 			},
 			{
@@ -1595,7 +1661,20 @@
 						78.9473684210526
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 25894.7368421053
+					}
+				],
 				"mustHitSection": true
 			},
 			{
@@ -1771,7 +1850,26 @@
 						315.789473684211
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.6
+								],
+								"name": "Scroll Velocity"
+							},
+							{
+								"args": [
+									0.95
+								],
+								"name": "Camera Zoom"
+							}
+						],
+						"time": 29052.6315789474
+					}
+				],
 				"mustHitSection": true
 			},
 			{
@@ -1833,7 +1931,26 @@
 						78.9473684210526
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							},
+							{
+								"args": [
+									0.81
+								],
+								"name": "Camera Zoom"
+							}
+						],
+						"time": 30315.7894736842
+					}
+				],
 				"mustHitSection": false
 			},
 			{
@@ -2111,7 +2228,20 @@
 						157.894736842105
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 36394.7368421053
+					}
+				],
 				"mustHitSection": true
 			},
 			{
@@ -2280,7 +2410,32 @@
 						0
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 37973.6842105263
+					},
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 38526.3157894737
+					}
+				],
 				"mustHitSection": false
 			},
 			{
@@ -2397,7 +2552,39 @@
 						236.842105263158
 					]
 				],
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 40263.1578947368
+					},
+					{
+						"events": [
+							{
+								"args": [
+									8,
+									0.02
+								],
+								"name": "Camera Zoom Interval"
+							},
+							{
+								"args": [
+									"mult",
+									0.8
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 40342.1052631579
+					}
+				],
 				"mustHitSection": true
 			},
 			{
@@ -2681,7 +2868,27 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							},
+							{
+								"args": [
+									4,
+									0.02
+								],
+								"name": "Camera Zoom Interval"
+							}
+						],
+						"time": 50526.3157894737
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -3085,7 +3292,20 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									2,
+									0.02
+								],
+								"name": "Camera Zoom Interval"
+							}
+						],
+						"time": 60631.5789473684
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -3153,7 +3373,21 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.01,
+									0.32,
+									"XY"
+								],
+								"name": "Screen Shake"
+							}
+						],
+						"time": 62210.5263157895
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -3349,7 +3583,21 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.01,
+									0.32,
+									"XY"
+								],
+								"name": "Screen Shake"
+							}
+						],
+						"time": 64815.7894736842
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -3442,7 +3690,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 66000
+					},
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 66157.8947368421
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -3520,7 +3793,45 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 67105.2631578947
+					},
+					{
+						"events": [
+							{
+								"args": [
+									0.01,
+									0.32,
+									"XY"
+								],
+								"name": "Screen Shake"
+							}
+						],
+						"time": 67342.1052631579
+					},
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 67500
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -3638,7 +3949,20 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 68842.1052631579
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -3716,7 +4040,20 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.04,
+									0.03
+								],
+								"name": "Camera Zoom Bump"
+							}
+						],
+						"time": 69868.4210526316
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -4101,7 +4438,19 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									1
+								],
+								"name": "Camera Zoom"
+							}
+						],
+						"time": 75789.4736842105
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -4483,7 +4832,26 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.81
+								],
+								"name": "Camera Zoom"
+							},
+							{
+								"args": [
+									4,
+									0.02
+								],
+								"name": "Camera Zoom Interval"
+							}
+						],
+						"time": 80842.1052631579
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -4521,7 +4889,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 82500
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.7
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 82815.7894736842
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -4647,7 +5040,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 85026.3157894737
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.7
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 85263.1578947369
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -4720,7 +5138,104 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 85894.7368421053
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 86052.6315789474
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 86210.5263157895
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 86368.4210526316
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 86526.3157894737
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 86684.2105263158
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 86842.1052631579
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 87000
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -4762,7 +5277,8 @@
 					],
 					[
 						86921.0526315789,
-						2,
+						1,
+						0,
 						0
 					],
 					[
@@ -4778,7 +5294,104 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 87157.8947368421
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 87315.7894736842
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 87473.6842105263
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 87631.5789473684
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 87789.4736842105
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 87947.3684210526
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 88105.2631578947
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 88263.1578947369
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -4809,8 +5422,9 @@
 						0
 					],
 					[
-						87868.4210526315,
-						1,
+						87868.4210526316,
+						2,
+						0,
 						0
 					],
 					[
@@ -4841,7 +5455,104 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 88421.0526315789
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 88578.9473684211
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 88736.8421052632
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 88894.7368421053
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 89052.6315789474
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 89210.5263157895
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 89368.4210526316
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 89526.3157894737
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -4894,7 +5605,104 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 89684.2105263158
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 89842.1052631579
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 90000
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 90157.8947368421
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 90315.7894736842
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 90473.6842105263
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 90631.5789473684
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 90789.4736842105
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -4925,8 +5733,9 @@
 						0
 					],
 					[
-						90394.7368421052,
-						1,
+						90394.7368421053,
+						0,
+						0,
 						0
 					],
 					[
@@ -4940,8 +5749,9 @@
 						0
 					],
 					[
-						90710.5263157894,
-						2,
+						90710.5263157895,
+						3,
+						0,
 						0
 					],
 					[
@@ -4957,7 +5767,44 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 91578.9473684211
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 91736.8421052632
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 91894.7368421053
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -5035,7 +5882,44 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 92842.1052631579
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 93000
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 93157.8947368421
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -5118,7 +6002,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 94105.2631578947
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 94263.1578947369
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -5181,7 +6090,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 95684.2105263158
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 95842.1052631579
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -5312,7 +6246,80 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 97500
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 97657.8947368421
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 97894.7368421053
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 98052.6315789474
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 98210.5263157895
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 98368.4210526316
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -5433,7 +6440,33 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							},
+							{
+								"args": [
+									16,
+									0.02
+								],
+								"name": "Camera Zoom Interval"
+							},
+							{
+								"args": [
+									1
+								],
+								"name": "Camera Zoom"
+							}
+						],
+						"time": 99789.4736842105
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -5486,7 +6519,19 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.81
+								],
+								"name": "Camera Zoom"
+							}
+						],
+						"time": 101052.631578947
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -5878,7 +6923,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 106421.052631579
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 106500
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -5956,7 +7026,56 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 107605.263157895
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 107684.210526316
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 107921.052631579
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 108000
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -6059,7 +7178,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 109263.157894737
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 109342.105263158
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -6939,7 +8083,33 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.8
+								],
+								"name": "Scroll Velocity"
+							},
+							{
+								"args": [
+									0.9
+								],
+								"name": "Camera Zoom"
+							},
+							{
+								"args": [
+									8,
+									0.02
+								],
+								"name": "Camera Zoom Interval"
+							}
+						],
+						"time": 121263.157894737
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -7144,7 +8314,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 127578.947368421
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 127736.842105263
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -7187,7 +8382,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 129473.684210526
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 129552.631578947
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -7240,7 +8460,32 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.3
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 130105.263157895
+					},
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 130184.210526316
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -7273,7 +8518,20 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.8
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 131368.421052632
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -7877,7 +9135,33 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.81
+								],
+								"name": "Camera Zoom"
+							},
+							{
+								"args": [
+									"mult",
+									1
+								],
+								"name": "Scroll Velocity"
+							},
+							{
+								"args": [
+									2,
+									0.02
+								],
+								"name": "Camera Zoom Interval"
+							}
+						],
+						"time": 141473.684210526
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -8903,7 +10187,26 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									1
+								],
+								"name": "Camera Zoom"
+							},
+							{
+								"args": [
+									"mult",
+									1.2
+								],
+								"name": "Scroll Velocity"
+							}
+						],
+						"time": 156631.578947368
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": true,
 				"lengthInSteps": 16,
@@ -9325,7 +10628,26 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									"mult",
+									0.9
+								],
+								"name": "Scroll Velocity"
+							},
+							{
+								"args": [
+									0.78
+								],
+								"name": "Camera Zoom"
+							}
+						],
+						"time": 161684.210526316
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -9504,7 +10826,21 @@
 			},
 			{
 				"sectionBeats": 4,
-				"events": [],
+				"events": [
+					{
+						"events": [
+							{
+								"args": [
+									0.01,
+									0.75,
+									"XY"
+								],
+								"name": "Screen Shake"
+							}
+						],
+						"time": 165710.526315789
+					}
+				],
 				"altAnim": false,
 				"mustHitSection": false,
 				"lengthInSteps": 16,
@@ -9762,6 +11098,56 @@
 				"bpm": 190
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"events": [],
+				"altAnim": false,
+				"bpm": 190,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"events": [],
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 190
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"events": [],
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 190
+			},
+			{
+				"events": [],
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 190,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"events": [],
+				"lengthInSteps": 16,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 190,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
 				"events": [],
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -9851,7 +11237,7 @@
 		"song": "Leshe-shabo",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "negasbg",
+		"stage": "negas",
 		"speed": 3.4,
 		"bpm": 190
 	}

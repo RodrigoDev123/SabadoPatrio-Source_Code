@@ -27,7 +27,7 @@ class HealthIcon extends FlxSprite
 		}else if(FileSystem.exists(path + ".png")){
 			image = FlxG.bitmap.add(BitmapData.fromFile(path + ".png"),false,path);
 		}else if(FileSystem.exists("assets/characters/icons/face.png")){
-			FlxG.log.warn('${char} is not a valid icon name. Using fallback');
+			trace('${char} is not a valid icon name. Using fallback');
 			image = FlxG.bitmap.add(BitmapData.fromFile("assets/characters/icons/face.png"),false,path);
 
 		}else{

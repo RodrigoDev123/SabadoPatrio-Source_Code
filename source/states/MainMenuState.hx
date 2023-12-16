@@ -14,6 +14,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import flixel.util.FlxSpriteUtil;
 import lime.app.Application;
 import haxe.Exception;
 using StringTools;
@@ -23,20 +24,19 @@ import flixel.input.mouse.FlxMouseEventManager;
 import ui.*;
 class MainMenuState extends MusicBeatState
 {
-	var curSelected:Int = 0;
+	public static var curSelected:Int = 0;
 	public var currentOptions:Options;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var gfDance:Character;
 
 	#if !switch
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'options'];
+	var optionShit:Array<String> = ['story_mode', 'freeplay', 'options', 'credits'];
 	#else
-	var optionShit:Array<String> = ['story mode', 'freeplay'];
+	var optionShit:Array<String> = ['story_mode', 'freeplay'];
 	#end
 
 	var magenta:FlxSprite;
-	var camFollow:FlxObject;
 
 	function onMouseDown(object:FlxObject){
 		if(!selectedSomethin){
@@ -93,15 +93,10 @@ class MainMenuState extends MusicBeatState
 		{
 			if(!currentOptions.oldMenus)
 			{
-				gfDance.playAnim('cheer');
+				gfDance.playAnim('hey');
 			}
 			selectedSomethin = true;
 			FlxG.sound.play(Paths.sound('confirmMenu'));
-			if(OptionUtils.options.menuFlash){
-				FlxFlicker.flicker(magenta, 1.1, 0.15, false);
-			}else{
-				magenta.visible=true;
-			}
 
 			menuItems.forEach(function(spr:FlxSprite)
 			{
@@ -124,7 +119,7 @@ class MainMenuState extends MusicBeatState
 
 							switch (daChoice)
 							{
-								case 'story mode':
+								case 'story_mode':
 									FlxG.switchState(new StoryMenuState());
 									trace("Story Menu Selected");
 								case 'freeplay':
@@ -141,7 +136,7 @@ class MainMenuState extends MusicBeatState
 
 							switch (daChoice)
 							{
-								case 'story mode':
+								case 'story_mode':
 									FlxG.switchState(new StoryMenuState());
 									trace("Story Menu Selected");
 								case 'freeplay':
@@ -175,7 +170,7 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
+		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG_new'));
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.13;
 		bg.setGraphicSize(Std.int(bg.width * 1.1));
@@ -184,32 +179,25 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = true;
 		add(bg);
 
-		camFollow = new FlxObject(0, 0, 1, 1);
-		add(camFollow);
+		var thing = new FNFSprite(FlxG.width * 0.002 + 20,0).loadGraphic(Paths.image('menucoso'));
+		thing.screenCenter(Y);
+		thing.updateHitbox();
+		thing.antialiasing = true;
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuBGMagenta'));
-		magenta.scrollFactor.x = 0;
-		magenta.scrollFactor.y = 0.13;
-		magenta.setGraphicSize(Std.int(magenta.width * 1.1));
-		magenta.updateHitbox();
-		magenta.screenCenter();
-		magenta.visible = false;
-		magenta.antialiasing = true;
-
-		add(magenta);
 		// magenta.scrollFactor.set();
 
 		if(!currentOptions.oldMenus){
 
-			gfDance = new Character(FlxG.width * 0.4 + 20, FlxG.height * 0.07,"gf",false);
+			gfDance = new Character(FlxG.width * 0.07 + 20, FlxG.height * 0.07,"bf-mex",true);
 			gfDance.antialiasing = true;
 			gfDance.scrollFactor.set();
 			add(gfDance);
 
-			gfDance.playAnim('danceLeft');
+			gfDance.playAnim('idle');
 
 			FlxMouseEventManager.add(gfDance,onMouseDown,onMouseUp,onMouseOver,onMouseOut);
 		}
+		add(thing);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -236,18 +224,19 @@ class MainMenuState extends MusicBeatState
 		}
 		else
 		{
-			var tex = Paths.getSparrowAtlas('FNF_main_menu_assets_new');
-
 			for (i in 0...optionShit.length)
 				{
-					var menuItem:FlxSprite = new FlxSprite(20, FlxG.height/2 + ((i-1) * 160));
-					menuItem.frames = tex;
-					menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-					menuItem.animation.addByPrefix('selected', optionShit[i] + " alt", 24);
-					menuItem.animation.play('idle');
+					var menuItem:FlxSprite = new FlxSprite(FlxG.width - 760, ((i) * 160));
+					menuItem.loadGraphic(Paths.image("menu_"+optionShit[i]));
+					//menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
+					//menuItem.animation.addByPrefix('selected', optionShit[i] + " alt", 24);
+					//menuItem.animation.play('idle');
 					menuItem.ID = i;
 					//menuItem.screenCenter(X);
+					menuItem.x -= 85 * i;
+					menuItem.setGraphicSize(Std.int(menuItem.width *0.75));
 					menuItems.add(menuItem);
+					menuItem.y -= 150;
 					menuItem.updateHitbox();
 					menuItem.scrollFactor.set();
 					menuItem.antialiasing = true;
@@ -256,9 +245,15 @@ class MainMenuState extends MusicBeatState
 				}
 		}
 
-
-
-		FlxG.camera.follow(camFollow, null, Main.adjustFPS(0.06));
+        var logoBl = new FlxSprite(-270, 270);
+		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+		logoBl.antialiasing = true;
+		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+		logoBl.animation.play('bump');
+		logoBl.updateHitbox();  
+		logoBl.alpha = 0.8;
+		logoBl.setGraphicSize(Std.int(logoBl.width*0.4));
+		add(logoBl);
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 1, 0, "v" + Application.current.meta.get('version') + " - Andromeda Engine PR1", 12);
 		versionShit.scrollFactor.set();
@@ -275,8 +270,8 @@ class MainMenuState extends MusicBeatState
 	override function beatHit(){
 		super.beatHit();
 		if(gfDance!=null){
-			if (!gfDance.animation.curAnim.name.startsWith("sing") && gfDance.animation.curAnim.name!="cheer")
-				gfDance.dance();
+			if (gfDance.isSinging && gfDance.animation.curAnim.name!="cheer")
+			 	 gfDance.dance();
 		}
 	}
 	override function update(elapsed:Float)
@@ -322,6 +317,7 @@ class MainMenuState extends MusicBeatState
 			}
 	}
 
+	var timeOnSelection:Float = 0.0;
 	function changeItem(huh:Int = 0,force:Bool=false)
 	{
 		if(force){
@@ -334,15 +330,16 @@ class MainMenuState extends MusicBeatState
 			if (curSelected < 0)
 				curSelected = menuItems.length - 1;
 		}
-
 		menuItems.forEach(function(spr:FlxSprite)
 		{
 			spr.animation.play('idle');
-
+			spr.scale.set(0.75,0.75);
+			spr.color = 0xFFA9B1C2;
 			if (spr.ID == curSelected)
 			{
 				spr.animation.play('selected');
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
+				spr.scale.set(0.8,0.8);
+				spr.color = FlxColor.WHITE;
 			}
 
 			spr.updateHitbox();

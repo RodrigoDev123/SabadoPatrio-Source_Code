@@ -1,0 +1,70 @@
+{
+	"charOffset": [
+		-60,
+		-225
+	],
+	"spritesheet": "negas_enojado",
+	"anims": [
+		{
+			"prefix": "negas enojado idle",
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 21,
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"prefix": "negas enojado up",
+			"offsets": [
+				1,
+				0
+			],
+			"fps": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"prefix": "negas enojado left",
+			"offsets": [
+				6,
+				-2
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "negas enojado right",
+			"offsets": [
+				4,
+				1
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "negas enojado down",
+			"offsets": [
+				-10,
+				-9
+			],
+			"fps": 24,
+			"name": "singDOWN",
+			"looped": false
+		}
+	],
+	"camOffset": [
+		140,
+		-50
+	],
+	"singDur": 6.1,
+	"flipX": false,
+	"antialiasing": true,
+	"iconName": "negas",
+	"beatDancer": true,
+	"healthColor": "0xFF626488",
+	"format": "andromeda"
+}

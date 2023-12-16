@@ -1,0 +1,130 @@
+{
+	"charOffset": [
+		0,
+		-70
+	],
+	"anims": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"fps": 24,
+			"prefix": "BF idle",
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"prefix": "Bf up",
+			"offsets": [
+				-27,
+				36
+			],
+			"fps": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"prefix": "Bf left",
+			"offsets": [
+				15,
+				-1
+			],
+			"fps": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"prefix": "Bf right",
+			"offsets": [
+				-44,
+				0
+			],
+			"fps": 24,
+			"name": "singRIGHT",
+			"looped": false
+		},
+		{
+			"prefix": "Bf down",
+			"offsets": [
+				13,
+				-78
+			],
+			"fps": 24,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"prefix": "Bf fail up",
+			"offsets": [
+				-24,
+				56
+			],
+			"fps": 24,
+			"name": "singUPmiss",
+			"looped": false
+		},
+		{
+			"prefix": "Bf fail right",
+			"offsets": [
+				134,
+				2
+			],
+			"fps": 24,
+			"name": "singRIGHTmiss",
+			"looped": false
+		},
+		{
+			"prefix": "Bf fail left",
+			"offsets": [
+				160,
+				-2
+			],
+			"fps": 24,
+			"name": "singLEFTmiss",
+			"looped": false
+		},
+		{
+			"prefix": "Bf fail down",
+			"offsets": [
+				9,
+				-62
+			],
+			"fps": 24,
+			"name": "singDOWNmiss",
+			"looped": false
+		},
+		{
+			"prefix": "Bf hey",
+			"offsets": [
+				-24,
+				-10
+			],
+			"fps": 24,
+			"name": "hey",
+			"looped": false
+		},
+		{
+			"prefix": "Bf Dodge",
+			"offsets": [
+				-14,
+				-5
+			],
+			"fps": null,
+			"name": "dodge",
+			"looped": false
+		}
+	],
+	"spritesheet": "COOL_BOYFRIEND",
+	"singDur": 4,
+	"camOffset": [
+		-55,
+		-45
+	],
+	"flipX": false,
+	"antialiasing": true,
+	"iconName": "cool-bf",
+	"beatDancer": false,
+	"format": "andromeda",
+	"healthColor": "0xFFFF1231"
+}

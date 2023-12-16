@@ -309,6 +309,17 @@ class EngineData {
     },
 
     {
+      name: "Appear PixxiMono",
+      arguments: [
+        {
+          name: "Visible?",
+          type: EventArgType.Dropdown,
+          defaultVal: "false",
+          dropdownValues: ["false","true"]
+        }
+      ]
+    },
+    {
       name: "Custom",
       arguments: [
         {
@@ -337,38 +348,23 @@ class EngineData {
   public static var mustUnlockWeeks:Bool=false; // TODO: make this work
   public static var weekData:Array<WeekData> = [
     new WeekData("Funkin' Virgin",0,'',[
-      new SongData("Tutorial","gf",0),
+      new SongData("Tutorial-economico","gf",0),
     ]),
-    new WeekData("DADDY DEAREST",1,'dad',[
-      "Bopeebo",
-      "Fresh",
-      "Dadbattle"
+    new WeekData("PLACE HOLDER",1,'bf',[
+      new SongData("Elotersans","sans",1),
+      new SongData("Quinceanera","qt",1),
+      new SongData("Adeudos","whitty",1)
     ]),
-    new WeekData("Spooky Month",2,'spooky',[
-      "Spookeez",
-      "South",
-      new SongData("Monster","monster",2)
+    new WeekData("PLACE HOLDER",2,'bf',[
+      new SongData("PLACE HOLDER","face",1),
+      "PLACE HOLDER",
+      "PLACE HOLDER"
     ]),
-    new WeekData("Pico",3,'pico',[
-      "Pico",
-      new SongData("Philly Nice","pico",3,"philly-nice"),
-      "Blammed"
-    ]),
-    new WeekData("MOMMY MUST MURDER",4,'mom',[
-      new SongData("Satin Panties","mom",4,"satin-panties"),
-      "High",
-      "MILF"
-    ]),
-    new WeekData("RED SNOW",5,'parents-christmas',[
-      "Cocoa",
-      "Eggnog",
-      new SongData("Winter Horrorland","monster",5,"winter-horrorland"),
-    ]),
-    new WeekData("hating simulator ft. moawling",6,'senpai',[
-      "Senpai",
-      "Roses",
-      new SongData("Thorns","spirit",6),
-    ]),
+    new WeekData("PUTA MADRE QEU HAGO AQUI >:V",3,'dad',[
+      new SongData("Leshe-shabo","negas",3),
+      new SongData("De-mal-Humor","negas",3),
+      new SongData("No-mames","negas",3),
+    ])
   ];
 
   // DON'T EDIT BEYOND THIS POINT!

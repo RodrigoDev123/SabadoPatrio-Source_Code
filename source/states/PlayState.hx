@@ -795,6 +795,8 @@ class PlayState extends MusicBeatState
 					modchart.addNoteEffect(vcrDistortionHUD);
 				}
 			}
+			case "negas":
+				stage.ratonsito.cameras = [camHUD];
 		}
 
 		/*ameCam3D = new RaymarchEffect();
@@ -831,6 +833,15 @@ class PlayState extends MusicBeatState
 		stage.boyfriend=boyfriend;
 
 		stage.setPlayerPositions(boyfriend,dad,gf);
+		switch (stage.curStage){
+			case "negas":
+				boyfriend.x += 580;
+				boyfriend.y -= 40;
+				dad.x += 153;
+				dad.y -= 48;
+				gf.x += 490;
+				gf.y -= 6;
+		}
 
 		defaultCamZoom=stage.defaultCamZoom;
 		if(boyfriend.curCharacter=='spirit' && !currentOptions.noChars){
@@ -938,12 +949,11 @@ class PlayState extends MusicBeatState
 		healthBar.smooth = currentOptions.smoothHPBar;
 		healthBar.scrollFactor.set();
 		healthBar.screenCenter(X);
-		healthBar.setColors(dad.iconColor,boyfriend.iconColor);
+		healthBar.bar.alpha = 1;
+		healthBar.bar.createFilledBar(dad.iconColor,FlxColor.fromString(boyfriend.charData.healthColor));
 
 		if(currentOptions.downScroll)
 			healthBar.y = FlxG.height*.1;
-
-
 
 		scoreTxt = new FlxText(healthBar.bg.x + healthBar.bg.width / 2 - 150, healthBar.bg.y + 25, 0, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -1148,7 +1158,7 @@ class PlayState extends MusicBeatState
 			newSprite.x += newSprite.posOffset.x;
 			newSprite.y += newSprite.posOffset.y;
 			healthBar.setIcons(boyfriend.iconName,dad.iconName);
-			healthBar.setColors(dad.iconColor,boyfriend.iconColor);
+			healthBar.bar.createFilledBar(dad.iconColor,FlxColor.fromString(boyfriend.charData.healthColor));
 
 			add(newSprite);
 			if(currAnim!="idle" && !currAnim.startsWith("dance")){
@@ -1192,7 +1202,7 @@ class PlayState extends MusicBeatState
 			newSprite.x += newSprite.posOffset.x;
 			newSprite.y += newSprite.posOffset.y;
 			healthBar.setIcons(boyfriend.iconName,dad.iconName);
-			healthBar.setColors(dad.iconColor,boyfriend.iconColor);
+			healthBar.bar.createFilledBar(dad.iconColor,FlxColor.fromString(boyfriend.charData.healthColor));
 
 			luaSprites[spriteName]=newSprite;
 			add(newSprite);
@@ -1204,6 +1214,19 @@ class PlayState extends MusicBeatState
 
 
 		}
+	}
+    
+    function appearPinxximono(){
+		if (stage.ratonsito != null)
+		{
+		stage.ratonsito.velocity.x = -850;
+		stage.ratonsito.visible = true;
+		if (stage.ratonsito.x <= -10){
+            stage.ratonsito.visible = false;
+			stage.ratonsito.velocity.x = 0;
+			stage.ratonsito.x = FlxG.width + 120; 
+		}
+	  }
 	}
 
 	function schoolIntro(?dialogueBox:DialogueBox):Void
@@ -2301,6 +2324,9 @@ class PlayState extends MusicBeatState
 	function doEvent(event:Event) : Void {
 		var args = event.args;
 		switch (event.name){
+			case 'Appear PixxiMono':
+				appearPinxximono();
+				trace("holyu shit");
 			case 'Change Character':
 				var shit:String = args[0];
 				switch(args[0]){
@@ -2995,11 +3021,11 @@ class PlayState extends MusicBeatState
 		}else{
 			if(botplayScore!=0){
 				if(songScore==0)
-					CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [BOT TACOS: ${botplayScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}% ');
+					CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [BOT TACOS: ${botplayScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}%]');
 				else
 					CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [TACOS: ${songScore} | BOT TACOS: ${botplayScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}%]');
 			}else{
-				CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [TACOS: ${songScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}%');
+				CoolUtil.setWindowTitle(CoolUtil.titleTemplate + " // " + SONG.song.toUpperCase() + ' [TACOS: ${songScore} | CAGADAS: ${judgeMan.getJudgementScore('miss')} | COMO VAS: ${shownAccuracy}%]');
 			}
 		}
         // END :D
@@ -3680,7 +3706,7 @@ class PlayState extends MusicBeatState
 
 	function doMiss(direction:Int = 1):Void
 	{
-		health += 0.05;
+		health += judgeMan.getJudgementHealth('miss');
 		judgeMan.judgementCounter.set("miss",judgeMan.judgementCounter.get("miss")+1);
 		updateJudgementCounters();
 		previousHealth=health;
@@ -3905,7 +3931,7 @@ class PlayState extends MusicBeatState
 			if(combo>highestCombo)
 				highestCombo=combo;
 
-			highComboTxt.text = "Highest Combo: " + highestCombo;
+			highComboTxt.text = "Mayor Combo mijo: " + highestCombo;
 		}
 
 		if((currentOptions.hitsoundType==1 || currentOptions.hitsoundType==3) && !note.isSustainNote)
@@ -3918,7 +3944,7 @@ class PlayState extends MusicBeatState
 			callLua("goodNoteHit",[note.noteData,note.strumTime,Conductor.songPosition,note.isSustainNote]); // TODO: Note lua class???
 
 
-		if(!note.isSustainNote)
+		// bullshit :V if(!note.isSustainNote)
 			health += judgeMan.getJudgementHealth(judgement);
 
 

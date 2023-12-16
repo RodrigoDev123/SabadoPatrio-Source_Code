@@ -43,10 +43,10 @@ class FreeplayState extends MusicBeatState
 	var songs:Array<SongData> = [];
 
 	var selector:FlxText;
-	var curSelected:Int = 0;
+	public static var curSelected:Int = 0;
 	var selectableDiffs:Array<Int>=[0,1,2];
 	var difficulties:Array<Array<Int>> = [];
-	var curDifficulty:Int = 1;
+	public static var curDifficulty:Int = 1;
 
 	var scoreText:FlxText;
 	var diffText:FlxText;
@@ -249,26 +249,6 @@ class FreeplayState extends MusicBeatState
 		selector.size = 40;
 		selector.text = ">";
 		// add(selector);
-
-		var swag:Alphabet = new Alphabet(1, 0, "swag");
-
-		// JUST DOIN THIS SHIT FOR TESTING!!!
-		/*
-			var md:String = Markdown.markdownToHtml(Assets.getText('CHANGELOG.md'));
-
-			var texFel:TextField = new TextField();
-			texFel.width = FlxG.width;
-			texFel.height = FlxG.height;
-			// texFel.
-			texFel.htmlText = md;
-
-			FlxG.stage.addChild(texFel);
-
-			// scoreText.textField.htmlText = md;
-
-			trace(md);
-		 */
-
 	}
 
 	public function addSongData(songData:EngineData.SongData){

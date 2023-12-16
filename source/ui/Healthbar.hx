@@ -33,15 +33,15 @@ class Healthbar extends FlxSpriteGroup {
     bg = new FlxSprite(0, 0).loadGraphic(Paths.image('healthBar','shared'));
 
     bar = new FlxBar(bg.x + 4, bg.y + 4, RIGHT_TO_LEFT, Std.int(bg.width - 8), Std.int(bg.height - 8), this, 'display', min, max);
-    bar.createFilledBar(baseColor,secondaryColor);
+    //bar.createFilledBar(baseColor,secondaryColor);
 
 
     iconP1 = new HealthIcon(player1, true);
-    iconP1.y = bar.y - (iconP1.height / 2);
+    iconP1.y = (bar.y - (iconP1.height / 2))-5;
 
 
     iconP2 = new HealthIcon(player2, false);
-    iconP2.y = bar.y - (iconP2.height / 2);
+    iconP2.y = (bar.y - (iconP2.height / 2))-5;
     add(bg);
     add(bar);
     add(iconP1);
@@ -56,7 +56,7 @@ class Healthbar extends FlxSpriteGroup {
   }
 
   public function setColors(baseColor:FlxColor,secondaryColor:FlxColor){
-    bar.createFilledBar(baseColor,secondaryColor);
+   // bar.createFilledBar(baseColor,secondaryColor);
     bar.updateBar();
   }
   public function setIconSize(iconP1Size:Int,iconP2Size:Int){

@@ -3,64 +3,68 @@
 		0,
 		0
 	],
-	"singDur": 6.1,
-	"spritesheet": "negas",
 	"anims": [
 		{
-			"prefix": "idle",
 			"offsets": [
 				0,
 				0
 			],
 			"fps": 24,
+			"prefix": "idle",
 			"name": "idle",
 			"looped": false
 		},
 		{
-			"prefix": "up",
 			"offsets": [
 				-47,
 				-8
 			],
 			"fps": 24,
+			"prefix": "up",
 			"name": "singUP",
 			"looped": false
 		},
 		{
-			"prefix": "left",
 			"offsets": [
 				-56,
 				-19
 			],
 			"fps": 24,
+			"prefix": "left",
 			"name": "singLEFT",
 			"looped": false
 		},
 		{
-			"prefix": "right",
 			"offsets": [
 				-81,
 				-27
 			],
 			"fps": 24,
+			"prefix": "right",
 			"name": "singRIGHT",
 			"looped": false
 		},
 		{
-			"prefix": "down",
 			"offsets": [
 				-71,
 				-41
 			],
 			"fps": 24,
+			"prefix": "down",
 			"name": "singDOWN",
 			"looped": false
 		}
 	],
+	"camOffset": [
+		140,
+		-75
+	],
+	"singDur": 6.1,
+	"spritesheet": "negas",
 	"flipX": false,
 	"antialiasing": true,
 	"iconName": "negas",
 	"beatDancer": false,
 	"format": "andromeda",
-	"healthColor": "0xFF455349"
+	"healthColor": "0xFFFF0000"
 }

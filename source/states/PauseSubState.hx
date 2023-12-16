@@ -22,17 +22,17 @@ class PauseSubState extends MusicBeatSubstate
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItems:Array<String> = [
-		'Resume',
-		'Restart Song',
+		'Resumir',
+		'Reiniciar rola',
 		#if ALLOW_SET_STARTPOS
 		"Set Start Position",
 		#end
-		'Exit to menu'];
+		'Volver al menu'];
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
 	var countingDown:Bool=false;
-
+	var bg:FlxSprite;
 	public function new(x:Float, y:Float)
 	{
 		super();
@@ -43,7 +43,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		FlxG.sound.list.add(pauseMusic);
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.alpha = 0;
 		bg.scrollFactor.set();
 		add(bg);
@@ -76,11 +76,11 @@ class PauseSubState extends MusicBeatSubstate
 		add(grpMenuShit);
 
 		if(PlayState.startPos>0)
-			menuItems.insert(2,"Restart from beginning");
+			menuItems.insert(2,"Reiniciar desde el comienzo");
 
 
 		if(PlayState.inCharter)
-			menuItems.insert(menuItems.length,"Exit to charter");
+			menuItems.insert(menuItems.length,"Regresar al charting");
 
 
 
@@ -89,6 +89,7 @@ class PauseSubState extends MusicBeatSubstate
 			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
 			songText.isMenuItem = true;
 			songText.targetY = i;
+			songText.ID = i;
 			grpMenuShit.add(songText);
 		}
 
@@ -123,18 +124,35 @@ class PauseSubState extends MusicBeatSubstate
 
 			switch (daSelected)
 			{
-				case "Resume":
-					close();
-				case "Restart Song":
+				case "Resumir":
+					FlxG.sound.play(Paths.sound('confirmMenu'));
+					flixel.effects.FlxFlicker.flicker(grpMenuShit.members[curSelected], 1, 0.06, false, false);
+					for (i in 0...grpMenuShit.members.length){
+					if (curSelected != grpMenuShit.members[i].targetY){
+							FlxTween.tween(bg, {alpha:0}, 0.4, {ease:FlxEase.circIn});
+							FlxTween.tween(grpMenuShit.members[i], {alpha: 0}, 0.4, {
+							ease: FlxEase.quadOut,
+							onComplete: function(twn:FlxTween)
+							{
+								grpMenuShit.members[i].kill();
+							}
+							});
+						}
+					}
+					new flixel.util.FlxTimer().start(1, function(tmr:flixel.util.FlxTimer)
+					{
+						close();
+					});
+				case "Reiniciar rola":
 					FlxG.resetState();
-				case "Restart from beginning":
+				case "Reiniciar desde el comienzo":
 					PlayState.startPos=0;
 					FlxG.resetState();
 				case "Set Start Position":
 					PlayState.startPos = Conductor.rawSongPos;
-				case "Exit to charter":
+				case "Regresar al charting":
 					FlxG.switchState(new ChartingState());
-				case "Exit to menu":
+				case "Volver al menu":
 
 					if(PlayState.isStoryMode)
 						FlxG.switchState(new StoryMenuState());

@@ -11,27 +11,27 @@
         "scale":1,
         "left":{
           "framerate": 22,
-          "offsetX": -12,
-          "offsetY": -37,
-          "prefix": "note splash 1 red"
+          "offsetX": -132,
+          "offsetY": -127,
+          "prefix": "note splash 1 green"
         },
         "up":{
           "framerate": 22,
-          "offsetX": 23,
-          "offsetY": -37,
+          "offsetX": -111,
+          "offsetY": -127,
           "prefix": "note splash 1 white"
         },
         "down":{
           "framerate": 22,
-          "offsetX": 23,
-          "offsetY": -37,
+          "offsetX": -111,
+          "offsetY": -117,
           "prefix": "note splash 1 white"
         },
         "right":{
           "framerate": 22,
-          "offsetX": 25,
-          "offsetY": -37,
-          "prefix": "note splash 1 green"
+          "offsetX": -109,
+          "offsetY": -117,
+          "prefix": "note splash 1 red"
         }
       },
       "notes":{

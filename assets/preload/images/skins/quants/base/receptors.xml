@@ -1,14 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="NOTE_assets_quants.png">
-	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+<TextureAtlas imagePath="receptors.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="arrowUP0000" x="2" y="2" width="157" height="154" pivotX="0" pivotY="0"/>
-	<SubTexture name="up confirm0000" x="161" y="2" width="236" height="232" pivotX="35" pivotY="34.95"/>
-	<SubTexture name="up confirm0001" x="399" y="2" width="236" height="232"/>
-	<SubTexture name="up confirm0002" x="637" y="2" width="214" height="211" frameX="-11" frameY="-10" frameWidth="236" frameHeight="232"/>
-	<SubTexture name="up confirm0003" x="637" y="2" width="214" height="211" frameX="-11" frameY="-10" frameWidth="236" frameHeight="232"/>
-	<SubTexture name="up press0000" x="853" y="2" width="144" height="141" pivotX="0" pivotY="0" frameX="-5" frameY="-4" frameWidth="153" frameHeight="150"/>
-	<SubTexture name="up press0001" x="853" y="2" width="144" height="141" frameX="-5" frameY="-4" frameWidth="153" frameHeight="150"/>
-	<SubTexture name="up press0002" x="2" y="236" width="153" height="150"/>
-	<SubTexture name="up press0003" x="2" y="236" width="153" height="150"/>
+	<SubTexture name="arrowUP0000" x="0" y="0" width="161" height="159"/>
+	<SubTexture name="arrowUP0001" x="0" y="0" width="161" height="159"/>
+	<SubTexture name="arrowUP0002" x="161" y="0" width="161" height="159"/>
+	<SubTexture name="arrowUP0003" x="161" y="0" width="161" height="159"/>
+	<SubTexture name="up confirm0000" x="322" y="0" width="219" height="232"/>
+	<SubTexture name="up confirm0001" x="541" y="0" width="213" height="217" frameX="-3" frameY="-8" frameWidth="219" frameHeight="232"/>
+	<SubTexture name="up confirm0002" x="754" y="0" width="201" height="200" frameX="-9" frameY="-23" frameWidth="219" frameHeight="232"/>
+	<SubTexture name="up confirm0003" x="0" y="232" width="179" height="177" frameX="-19" frameY="-27" frameWidth="219" frameHeight="232"/>
+	<SubTexture name="up confirm0004" x="0" y="232" width="179" height="177" frameX="-19" frameY="-27" frameWidth="219" frameHeight="232"/>
+	<SubTexture name="up confirm0005" x="0" y="232" width="179" height="177" frameX="-19" frameY="-27" frameWidth="219" frameHeight="232"/>
+	<SubTexture name="up press0000" x="179" y="232" width="122" height="126" frameX="-19" frameY="-10" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0001" x="179" y="232" width="122" height="126" frameX="-19" frameY="-10" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0002" x="301" y="232" width="138" height="135" frameX="-11" frameY="-5" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0003" x="439" y="232" width="161" height="147"/>
+	<SubTexture name="up press0004" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0005" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0006" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0007" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0008" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0009" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0010" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0011" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0012" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0013" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
+	<SubTexture name="up press0014" x="600" y="232" width="148" height="146" frameX="-6" frameY="0" frameWidth="161" frameHeight="147"/>
 </TextureAtlas>

@@ -61,9 +61,9 @@ class JudgementData {
 class JudgementManager
 {
 	public static var judgementDisplayNames:Map<String,String> = [
-		"epic"=>"Epic",
+		"epic"=>"Perrones!!",
 		"sick"=>"Awebos",
-		"good"=>"Chido",
+		"good"=>"Chidos",
 		"bad"=>"Vergas",
 		"shit"=>"Putos",
 		"miss"=>"Cagadas"

@@ -20,36 +20,13 @@ import Shaders;
 
 class Stage extends FlxTypedGroup<FlxBasic> {
   public static var songStageMap:Map<String,String> = [
-    "pico"=>"philly",
-    "philly-nice"=>"philly",
-    "blammed"=>"philly",
-    "spookeez"=>"spooky",
-    "south"=>"spooky",
-    "monster"=>"spooky",
-    "satin-panties"=>"limo",
-    "high"=>"limo",
-    "milf"=>"limo",
-    "eggnog"=>"mall",
-    "cocoa"=>"mall",
-    "winter-horrorland"=>"mallEvil",
-    "senpai"=>"school",
-    "roses"=>"school",
-    "thorns"=>"schoolEvil",
-    "bopeebo"=>"stage",
-    "fresh"=>"stage",
-    "dadbattle"=>"stage",
     "tutorial"=>"stage",
+    "leshe-shabo"=>"negas"
   ];
 
   public static var stageNames:Array<String> = [
     "stage",
-    "spooky",
-    "philly",
-    "limo",
-    "mall",
-    "mallEvil",
-    "school",
-    "schoolEvil",
+    "negas",
     "blank"
   ];
 
@@ -79,6 +56,10 @@ class Stage extends FlxTypedGroup<FlxBasic> {
   public var fastCar:FlxSprite;
   public var limo:FlxSprite;
   var fastCarCanDrive:Bool=true;
+
+  //Negas BG
+  public var ratonsito:FlxSprite;
+  public var kitchen:FlxSprite;
 
   // misc, general bg stuff
 
@@ -213,6 +194,28 @@ class Stage extends FlxTypedGroup<FlxBasic> {
     overlay.scrollFactor.set(0,0); // so the "overlay" layer stays static
 
     switch (stage){
+      case 'negas':
+        defaultCamZoom = 0.81;
+        kitchen = new FlxSprite(0, 0);
+        kitchen.loadGraphic(Paths.image("stages/negas/negasBG"));
+        kitchen.scrollFactor.set(0.98, 0.98);
+        kitchen.setGraphicSize(Std.int(kitchen.width * 0.6));
+        kitchen.screenCenter(XY);
+        kitchen.x += 1100;
+        kitchen.y += 630;
+        kitchen.updateHitbox();
+        kitchen.antialiasing = true;
+        add(kitchen);
+
+        ratonsito = new FlxSprite(FlxG.width + 130, FlxG.height-150);
+        ratonsito.loadGraphic(Paths.image("stages/negas/pinchirata"));
+        ratonsito.screenCenter(Y);
+        ratonsito.setGraphicSize(Std.int(ratonsito.width * 1.32));
+        ratonsito.updateHitbox();
+        ratonsito.antialiasing = true;
+        ratonsito.scrollFactor.set();
+        ratonsito.visible = false;
+        add(ratonsito);
       case 'philly':
         var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('philly/sky','week3'));
         bg.scrollFactor.set(0.1, 0.1);
@@ -484,8 +487,9 @@ class Stage extends FlxTypedGroup<FlxBasic> {
         }
 
         var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay','week4'));
-        overlayShit.alpha = 0.5;
-        // add(overlayShit);
+        overlayShit.alpha = 0.42;
+        overlayShit.blend = ADD;
+        add(overlayShit);
 
         // var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
 
